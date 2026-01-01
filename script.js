@@ -5,7 +5,7 @@ function checkPassword() {
   const error = document.getElementById("error");
 
   if (input === correctPassword) {
-    openSection("menu");
+    openSection("loveGame");
     error.style.display = "none";
   } else {
     error.style.display = "block";
@@ -23,20 +23,18 @@ function back() {
   openSection("menu");
 }
 
+/* LOVE GAME */
+function loveYes() {
+  openSection("loveYesSlide");
+}
+
+function loveNo() {
+  alert("no is disabled. try again pls 😔💔");
+}
+
+/* GIFT */
 function openGift() {
   document.getElementById("giftBox").style.display = "none";
   document.getElementById("openText").style.display = "none";
   document.getElementById("giftContent").classList.remove("hidden");
-
-  for (let i = 0; i < 30; i++) {
-    const c = document.createElement("div");
-    c.className = "confetti";
-    c.style.left = Math.random() * 100 + "vw";
-    c.style.background = ["#7db7ff", "#ffb7d5", "#cdb4db"][
-      Math.floor(Math.random() * 3)
-    ];
-    c.style.animationDuration = 2 + Math.random() * 2 + "s";
-    document.body.appendChild(c);
-    setTimeout(() => c.remove(), 3000);
-  }
 }
