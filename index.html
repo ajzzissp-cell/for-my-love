@@ -9,91 +9,105 @@
   <body>
     <!-- PASSWORD -->
     <section id="passwordPage" class="card active">
-      <h1>Hi, my love 🤍</h1>
-      <p class="hint">A special date we both know.</p>
+      <h1>hi, my love 🤍</h1>
+      <p class="hint">a special date we both know.</p>
       <input type="password" id="passwordInput" placeholder="dd-mm" />
-      <button onclick="checkPassword()">Enter</button>
-      <p id="error" class="error">Wrong password</p>
+      <button onclick="checkPassword()">enter</button>
+      <p id="error" class="error">wrong password 😢</p>
+    </section>
+
+    <!-- LOVE GAME -->
+    <section id="loveGame" class="card">
+      <h2>do you love me?</h2>
+
+      <div class="love">💙</div>
+
+      <div class="choice">
+        <button onclick="loveYes()">yes</button>
+        <button onclick="loveNo()">no</button>
+      </div>
+
+      <p id="loveMsg" class="text"></p>
+      <button id="nextBtn" class="hidden" onclick="openSection('menu')">
+        next →
+      </button>
+    </section>
+
+    <!-- LOVE YES SLIDE -->
+    <section id="loveYesSlide" class="card">
+      <div class="love-image">
+        <img src="images/love-image.png" alt="love" />
+      </div>
+
+      <p class="text">yayy 🥺💙 i love you more, bb.</p>
+
+      <button onclick="openSection('menu')">next →</button>
     </section>
 
     <!-- MENU -->
     <section id="menu" class="card">
-      <h1>For my Rainy 🤍</h1>
+      <h1>for my rainy 🤍</h1>
       <div class="menu">
-        <button onclick="openSection('music')">🎵 Music</button>
-        <button onclick="openSection('notes')">💌 Notes</button>
-        <button onclick="openSection('gift')">🎁 Gift</button>
+        <button onclick="openSection('music')">🎵 music</button>
+        <button onclick="openSection('notes')">💌 notes</button>
+        <button onclick="openSection('gift')">🎁 gift</button>
       </div>
     </section>
 
     <!-- MUSIC -->
     <section id="music" class="card">
-      <h2>Our Songs 🎵</h2>
-
+      <h2>our songs 🎵</h2>
       <ul class="music-list">
         <li>
-          <strong>She Chose Me – Bruno Major</strong>
-          <p>This song reminds me of how lucky I am to be chosen by you.</p>
+          <strong>She Chose Me</strong>
+          <p>this song reminds me of us.</p>
         </li>
         <li>
-          <strong>Nothing – Bruno Major</strong>
-          <p>Simple, calm, and warm — just like how I feel with you.</p>
+          <strong>Nothing</strong>
+          <p>simple and calm, just like being with you.</p>
         </li>
         <li>
-          <strong>Pink Matter – Frank Ocean</strong>
-          <p>
-            This song feels deep and honest, it always makes me think of us.
-          </p>
+          <strong>Pink Matter</strong>
+          <p>deep, honest, and real.</p>
         </li>
         <li>
-          <strong>Best Part – Daniel Caesar</strong>
-          <p>Because you really are the best part of my days.</p>
+          <strong>Best Part</strong>
+          <p>because you really are.</p>
         </li>
       </ul>
-
-      <button class="back" onclick="back()">← Back</button>
+      <button class="back" onclick="back()">← back</button>
     </section>
 
     <!-- NOTES -->
     <section id="notes" class="card">
-      <h2>For You 🤍</h2>
+      <h2>for you 🤍</h2>
       <p class="text">
-        aku sebenernya ga jago nulis hal-hal ginian. jadi ya ini seadanya aja,
-        kayak cara aku ngomong biasanya. tapi aku mau kamu tau satu hal, aku
-        bersyukur punya kamu, sayang. not in a dramatic way, more like… aku
-        nyaman sama kamu. sejak ada kamu, banyak hal kerasa lebih simpel.
-        pikiran ga terlalu ribet, hari-hari juga ga kerasa berat. kadang cukup
-        ngobrol bentar, atau sekadar tau kamu ada, itu udah cukup. makasih ya,
-        sayang, buat cara kamu peduli tanpa berisik. ga banyak tuntutan, ga
-        banyak drama, tapi kerasa. i really appreciate that. being with you
-        feels natural. ga perlu usaha berlebihan, ga perlu jadi siapa-siapa. we
-        just are, and that’s enough. aku ga tau semuanya bakal kayak gimana ke
-        depannya, tapi sejauh ini aku seneng jalan bareng kamu. seneng punya
-        kamu buat diajak sharing, seneng punya kamu buat diajak diem juga. so
-        yeah, i’m glad it’s you, sayang. dan semoga kita bisa terus kayak gini,
-        pelan-pelan, tetap sederhana, tapi saling milih.
+        aku sebenernya ga jago nulis ginian. jadi ya ini seadanya aja, kayak
+        cara aku ngomong. tapi aku bersyukur punya kamu, sayang. not in a
+        dramatic way, more like… aku nyaman sama kamu. sejak ada kamu, banyak
+        hal kerasa lebih simpel. hari-hari ga terlalu berat, dan semuanya kerasa
+        lebih tenang. so yeah, i’m glad it’s you. pelan-pelan aja, tapi bareng
+        🤍
       </p>
-      <button class="back" onclick="back()">← Back</button>
+      <button class="back" onclick="back()">← back</button>
     </section>
 
     <!-- GIFT -->
     <section id="gift" class="card">
-      <h2>A Little Gift 🎁</h2>
-
+      <h2>a little gift 🎁</h2>
       <div id="giftBox" class="gift-box" onclick="openGift()">🎁</div>
-      <p id="openText">Open it</p>
+      <p id="openText">open it</p>
 
       <div id="giftContent" class="hidden">
         <div class="rose">🌹</div>
-        <p class="text">
-          This is just a small reminder that you are appreciated, loved, and
-          always special to me 🤍
-        </p>
+        <p class="text">this is just a small reminder that you are loved 🤍</p>
       </div>
 
-      <button class="back" onclick="back()">← Back</button>
+      <button class="back" onclick="back()">← back</button>
     </section>
 
     <script src="script.js"></script>
   </body>
 </html>
+
+
