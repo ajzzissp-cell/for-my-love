@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For my Rainy</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- PASSWORD -->
+    <section id="passwordPage" class="card active">
+      <h1>Hi, my love 🤍</h1>
+      <p class="hint">A special date we both know.</p>
+      <input type="password" id="passwordInput" placeholder="dd-mm" />
+      <button onclick="checkPassword()">Enter</button>
+      <p id="error" class="error">Wrong password</p>
+    </section>
+
+    <!-- MENU -->
+    <section id="menu" class="card">
+      <h1>For my Rainy 🤍</h1>
+      <div class="menu">
+        <button onclick="openSection('music')">🎵 Music</button>
+        <button onclick="openSection('notes')">💌 Notes</button>
+        <button onclick="openSection('gift')">🎁 Gift</button>
+      </div>
+    </section>
+
+    <!-- MUSIC -->
+    <section id="music" class="card">
+      <h2>Our Songs 🎵</h2>
+
+      <ul class="music-list">
+        <li>
+          <strong>She Chose Me – Bruno Major</strong>
+          <p>This song reminds me of how lucky I am to be chosen by you.</p>
+        </li>
+        <li>
+          <strong>Nothing – Bruno Major</strong>
+          <p>Simple, calm, and warm — just like how I feel with you.</p>
+        </li>
+        <li>
+          <strong>Pink Matter – Frank Ocean</strong>
+          <p>
+            This song feels deep and honest, it always makes me think of us.
+          </p>
+        </li>
+        <li>
+          <strong>Best Part – Daniel Caesar</strong>
+          <p>Because you really are the best part of my days.</p>
+        </li>
+      </ul>
+
+      <button class="back" onclick="back()">← Back</button>
+    </section>
+
+    <!-- NOTES -->
+    <section id="notes" class="card">
+      <h2>For You 🤍</h2>
+      <p class="text">
+        aku sebenernya ga jago nulis hal-hal ginian. jadi ya ini seadanya aja,
+        kayak cara aku ngomong biasanya. tapi aku mau kamu tau satu hal, aku
+        bersyukur punya kamu, sayang. not in a dramatic way, more like… aku
+        nyaman sama kamu. sejak ada kamu, banyak hal kerasa lebih simpel.
+        pikiran ga terlalu ribet, hari-hari juga ga kerasa berat. kadang cukup
+        ngobrol bentar, atau sekadar tau kamu ada, itu udah cukup. makasih ya,
+        sayang, buat cara kamu peduli tanpa berisik. ga banyak tuntutan, ga
+        banyak drama, tapi kerasa. i really appreciate that. being with you
+        feels natural. ga perlu usaha berlebihan, ga perlu jadi siapa-siapa. we
+        just are, and that’s enough. aku ga tau semuanya bakal kayak gimana ke
+        depannya, tapi sejauh ini aku seneng jalan bareng kamu. seneng punya
+        kamu buat diajak sharing, seneng punya kamu buat diajak diem juga. so
+        yeah, i’m glad it’s you, sayang. dan semoga kita bisa terus kayak gini,
+        pelan-pelan, tetap sederhana, tapi saling milih.
+      </p>
+      <button class="back" onclick="back()">← Back</button>
+    </section>
+
+    <!-- GIFT -->
+    <section id="gift" class="card">
+      <h2>A Little Gift 🎁</h2>
+
+      <div id="giftBox" class="gift-box" onclick="openGift()">🎁</div>
+      <p id="openText">Open it</p>
+
+      <div id="giftContent" class="hidden">
+        <div class="rose">🌹</div>
+        <p class="text">
+          This is just a small reminder that you are appreciated, loved, and
+          always special to me 🤍
+        </p>
+      </div>
+
+      <button class="back" onclick="back()">← Back</button>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
