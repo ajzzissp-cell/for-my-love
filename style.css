@@ -32,11 +32,12 @@ h2 {
   color: #5b8fd8;
 }
 
-.menu {
-  margin-top: 25px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+input {
+  padding: 10px;
+  width: 80%;
+  border-radius: 10px;
+  border: 1px solid #cce0ff;
+  margin-bottom: 10px;
 }
 
 button {
@@ -57,10 +58,11 @@ button:hover {
   background: #b3d6ff;
 }
 
-.text {
-  font-size: 14px;
-  color: #555;
-  line-height: 1.6;
+.menu {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .music-list {
@@ -68,26 +70,35 @@ button:hover {
   padding: 0;
 }
 
-.music-list li {
-  margin-bottom: 15px;
-}
-
 .music-list p {
   font-size: 13px;
   color: #666;
 }
 
-input {
-  padding: 10px;
-  width: 80%;
-  border-radius: 10px;
-  border: 1px solid #cce0ff;
-  margin-bottom: 10px;
+.text {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
 }
 
 .error {
   color: #ff7b7b;
-  font-size: 13px;
+  display: none;
+}
+
+/* LOVE GAME */
+.love {
+  font-size: 60px;
+  margin: 20px 0;
+}
+
+.choice {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.hidden {
   display: none;
 }
 
@@ -96,11 +107,6 @@ input {
   font-size: 60px;
   cursor: pointer;
   animation: bounce 1.5s infinite;
-}
-
-#openText {
-  font-size: 14px;
-  color: #888;
 }
 
 @keyframes bounce {
@@ -113,27 +119,23 @@ input {
   }
 }
 
-.hidden {
-  display: none;
-}
-
 .rose {
   font-size: 50px;
-  margin-bottom: 10px;
+}
+.love-image img {
+  width: 100px;
+  animation: pulse 1.5s infinite;
+  margin-bottom: 15px;
 }
 
-/* CONFETTI */
-.confetti {
-  position: fixed;
-  width: 8px;
-  height: 8px;
-  top: -10px;
-  animation: fall 3s linear forwards;
-}
-
-@keyframes fall {
-  to {
-    transform: translateY(100vh) rotate(360deg);
-    opacity: 0;
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
   }
 }
